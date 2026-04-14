@@ -71,7 +71,11 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
+<<<<<<< HEAD
     strings: ["Data Analyst", "BI Analyst", "Power BI Developerrrrrr"],
+=======
+    strings: ["Data Analyst", "BI Analyst", "Power BI Developerrrrrr],
+>>>>>>> 5ee31c4f56987f04c0b01fd0a745bb42cb5263ff
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
