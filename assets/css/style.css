@@ -462,13 +462,17 @@ header .navbar ul li a:hover {
 .skills {
   min-height: 90vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
+  padding-bottom: 4rem;
 }
+
 .skills h2 {
   color: #fff;
 }
+
 .skills .heading span {
   color: rgb(255, 230, 0);
 }
+
 .skills .container {
   background: rgba(0, 0, 22, 0.4);
   color: #fff;
@@ -478,55 +482,78 @@ header .navbar ul li a:hover {
   margin: auto;
   margin-top: 2rem;
 }
+
 .skills .container .row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.8rem;
 }
+
 .skills .container .bar {
-  margin-bottom: 15px;
-  padding: 10px;
+  min-height: 140px;
+  padding: 1.5rem 1rem;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 22, 0.9);
   transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
   background-color: rgba(0, 0, 0, 0.9) !important;
 }
+
 .skills .container .bar .info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
+  text-align: center;
 }
-.skills .container .bar .info i {
-  font-size: 4rem;
+
+.skills .container .bar .info img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
+
 .skills .container .bar .info span {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 500;
   font-family: "Poppins";
-  margin-left: 0.5rem;
+  line-height: 1.3;
 }
-/* skills media queries starts*/
+
+/* tablet */
+@media screen and (max-width: 900px) {
+  .skills .container .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* mobile */
 @media screen and (max-width: 600px) {
   .skills .container {
-    padding: 0;
-    margin: 0;
+    padding: 1rem;
+    width: 95%;
+    margin-top: 1rem;
   }
+
   .skills .container .row {
     grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
     gap: 1rem;
   }
-  .skills .container {
-    margin-top: 5px;
-    width: 100%;
+
+  .skills .container .bar {
+    min-height: 120px;
+    padding: 1rem;
+  }
+
+  .skills .container .bar .info span {
+    font-size: 1.4rem;
   }
 }
 /* skills media queries ends*/
